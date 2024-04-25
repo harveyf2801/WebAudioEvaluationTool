@@ -1,5 +1,23 @@
 # Web Audio Evaluation Tool
 
+## Run Locally with Python
+
+Run locally using `python python/pythonServer.py`
+Go to `http://localhost:8000/test.html?url=tests/APATests.xml` (check local host is at 8000 first though)
+
+To get scores back from the tests call `python python/score_parser.py saves`
+Render these scores to pdf graph `python python/score_plot.py saves/ratings/`
+
+Find information about survey questions `python python/survey_parser.py saves`
+
+## MUSHRA
+
+**Anchor**: The anchor is an audio sample with a known quality level. It represents the extreme ends of the quality spectrum and helps participants calibrate their judgments. Typically, the anchor is chosen to represent the highest and lowest quality levels achievable by the system being evaluated. For example, the highest-quality anchor might be a lossless audio sample, while the lowest-quality anchor might be heavily compressed or distorted audio.
+
+**Reference**: The reference, also known as the hidden reference, is an audio sample that all other samples are compared against. It serves as a standard of comparison, and participants are not explicitly told which sample is the reference. Instead, they use it as a benchmark to judge the quality of other samples. The reference should be of high quality and representative of the intended use case.
+
+**Normal Audio**: In MUSHRA testing, the "normal" audio samples are the ones being evaluated for their quality. These samples represent different encoding methods, devices, or algorithms that are being compared. Participants listen to these samples and rate their quality relative to the reference. The normal audio should cover a range of conditions or scenarios that the system is expected to encounter in real-world usage.
+
 ## Authors
 
 | Author  | e-mail | 
